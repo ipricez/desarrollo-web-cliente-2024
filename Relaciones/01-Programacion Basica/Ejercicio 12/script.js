@@ -1,5 +1,5 @@
 // Definición de la función
-function filtroColores(arrayA,arrayB) {
+function filtroColores(colores,usuario) {
     
     let coloresEncontrados = [];
     let noColores = [];
