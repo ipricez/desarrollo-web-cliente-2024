@@ -1,0 +1,74 @@
+Clase 26/09/2024
+
+let salir = false
+for (let i=0;(i<23 && !salir); i++) {
+    if (i==17) {
+        salir=true;
+    }
+}
+
+let i = 0;
+let salir = false;
+while (i<23 && !salir) {
+    if (i==17) {
+        salir=true;
+    }
+    i++;
+}
+
+***************************
+- Tipos de funciones en JS
+***************************
+
+a. COMUNES
+function pakitomalaga(/parámetros) {
+    ---
+    ---
+}
+ejemplo();
+
+b. FUNCIONES AUTOINVOCADAS O AUTOEJECUTADAS
+( pakitomalaga (/parámetros) {
+    ---
+    ---
+} (/valores para los parámetros (argumentos)) )
+
+IIEF // inmediate invocate ...
+
+c. FUNCIONES ANÓNIMAS
+Las funciones en JS son un tipo de dato
+lista.some(pakitomalaga);
+
+let persi = function(nombre) {
+    console.log (nombre);
+}
+
+AMBAS DEVUELVEN TRUE OR FALSE
+lista.some(function(ele){
+    return ele>18;
+})
+lista.every (function(ele){
+    return ele>18;
+})
+
+d. FUNCIONES FLECHA
+function nombre (a,b) {
+    console-log("milú);
+    return 23;
+}
+
+en flecha -->
+const tintin = (a,b) => {
+    console.log("milú);
+    return 23;
+}
+let res = tintin;
+
+CASO ESPECIAL QUE SOLO HAYA UN RETURN
+function nombre (a,b) {
+    return a+b;
+}
+
+en flecha -->
+const tintin = (a,b) => a+b;
+let res = tintin;
