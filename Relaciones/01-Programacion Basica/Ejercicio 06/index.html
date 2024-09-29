@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 06</title>
+</head>
+<body>
+    <!-- 
+        Crea un script que pida al usuario un numero entero positivo N mayor a 0.
+        Hay que controlar que el numero introducido sea correcto. Si no es así se volverá a pedir.
+        continuación debe realizar lo siguiente:
+        a) Calcular los divisores del numero N y mostrarlos.
+        b) Calcular la suma de los cuadrados de los divisores obtenidos en el paso anterior mostrarla.
+        c) Indicar si esa suma es un cuadrado o no (con una frase por pantalla)
+        Nota: NO se pueden usar arrays en este ejercicio.
+    -->
+    <script>
+        // Bucle para validar la entrada
+        do {
+            var num = prompt("Numero entero positivo N mayor a 0");
+        } while (num<0);
+        console.log("Numero introducido: "+num);
+
+        // a) Calcular los divisores del numero N y mostrarlos.
+        // b) Calcular la suma de los cuadrados de los divisores obtenidos en el paso anterior mostrarla.
+        var sumaCuad = 0;
+        for (let i=1;i<=num;i++) {
+            // if (num%i==0) console.log(i+" es divisor de "+num);
+            if (num%i==0) {
+                console.log(i+" es divisor de "+num);
+                sumaCuad += (i*i);
+            }
+        }
+        console.log("La suma de los cuadrados de los divisores: "+sumaCuad);
+
+        // Indicar si esa suma es un cuadrado o no (con una frase por pantalla).
+        let encontrado = false;
+        for (let i = 0; ((i*i)<sumaCuad || !encontrado); i++) {
+            if ((i*i) == sumaCuad) {
+                encontrado = true;
+                alert("El numero es cuadrado.")
+            }
+        }
+        if (!encontrado) alert("El numero no es cuadrado.")
+    </script>
+
+</body>
+</html>

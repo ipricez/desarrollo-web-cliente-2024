@@ -1,1 +1,0 @@
-let colores = ['grey','red','blue','green','yellow','black']

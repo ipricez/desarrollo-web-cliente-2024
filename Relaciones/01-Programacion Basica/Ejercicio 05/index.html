@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 05</title>
+    <!-- Inserto la direccion del script-->
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <!--
+        Pedir dos valores numéricos con prompt y mostrar su suma, resta,
+        multiplicación, división y resto.
+    -->
+    <script>
+        let valor1 = prompt("Dame un valor 'a':");
+        let valor2 = prompt("Dame un valor 'b':");
+
+        // Momento de las funciones
+        console.log("Valor a: "+valor1);
+        console.log("Valor b: "+valor2);
+        // Se usa el parseInt debido a que prompt recoge un STRING y hay que pasarlo a int
+        console.log("Suma: "+(parseInt(valor1)+parseInt(valor2)));
+        console.log("Resta: "+(parseInt(valor1)-parseInt(valor2)));
+        console.log("Multiplicación: "+(parseInt(valor1)*parseInt(valor2)));
+        console.log("División: "+(parseInt(valor1)/parseInt(valor2)));
+        console.log("Resto: "+(parseInt(valor1)%parseInt(valor2)));
+
+
+    </script>
+</body>
+</html>
