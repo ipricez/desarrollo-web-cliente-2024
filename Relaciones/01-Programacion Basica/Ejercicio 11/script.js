@@ -7,7 +7,7 @@
 function quimica(cadenaADN) {
     
     // Creo la cadena ARN
-    let cadenaARN ="";
+    let cadenaARN ='';
 
     return cadenaADN.replaceAll('T','U');
 
