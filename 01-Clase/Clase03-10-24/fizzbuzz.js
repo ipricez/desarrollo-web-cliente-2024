@@ -44,7 +44,7 @@ function crearMatriz(){
 // Apartado a)
 function numMayor() {
     let matriz = crearMatriz();
-    let numMayor = 0;
+    let numMayor = 0; //-Infinity
     let aux = false;
     for (let i = 0; i < matriz.length; i++) {
         for (let j = 0; j < matriz.length; j++) {
@@ -104,5 +104,13 @@ function fizzbuzz(){
         }
     }
     console.log(matriz);
+    /**
+     * for (fila of matriz){
+     *  for (numero of fila){
+     * 
+     *  }
+     * 
+     * }
+     */
     
 }
