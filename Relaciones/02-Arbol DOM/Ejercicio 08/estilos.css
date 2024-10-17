@@ -1,0 +1,17 @@
+.uno {
+    border: 10px;
+    background-color: coral;
+    border-radius: 10px;
+    height: 80px;
+    width: 120px;
+    text-align: center;
+}
+.dos {
+    border: 10px;
+    background-color:darkblue;
+    color:antiquewhite ;
+    border-radius: 10px;
+    height: 80px;
+    width: 120px;
+    text-align: center;
+}

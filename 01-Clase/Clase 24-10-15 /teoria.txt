@@ -1,7 +1,7 @@
-1) d.getElementsByTagName(#nombreEtiqueta) --> "array" con referencias a cada etiqueta buscada
-2) d.getElementsByTagName(#valorAtributoname) --> "array" con las etiquetas cuyo atributo NAME tenga ese valor
-3) d.getElementsByClassName(#valorAtributoclass) --> "array" con referencias a las etiquetas cuyo atributo class tenga ese valor
-4) d.getelementById(#valorAtributoID) --> Una referencia a la UNICA etiqueta con ese ID
+1) d.getElementsByTagName( nombreEtiqueta ) --> "array" con referencias a cada etiqueta buscada
+2) d.getElementsByName( valorAtributoName ) --> "array" con las etiquetas cuyo atributo NAME tenga ese valor
+3) d.getElementsByClassName( valorAtributoClass ) --> "array" con referencias a las etiquetas cuyo atributo class tenga ese valor
+4) d.getelementById( valorAtributoID ) --> Una referencia a la UNICA etiqueta con ese ID
 ----------------------------------------------------------------------------------------------------------------------------------
 5) d.querySelector(#un selector de CSS) --> Una referencia a la etiqueta que seleccione ese selector
 6) d.querySelectorAll(#un selector de CSS) --> Un "array" con todas las etiquetas seleccionadas por ese selector
