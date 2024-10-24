@@ -1,0 +1,17 @@
+let dedo = d.get...;
+dedo.
+    clientWidth
+    clientHeight
+    offsetWidth
+    offsetHeight
+    ;
+
+Estamos con DOM pero la ultima clase del 22/10/24 dimos BOM (Browser Object Model).
+Mirar apuntes de Jaime.
+
+screen.
+        width       - 1920x1080
+        height      -
+        availWidth      me da el tamaño de la pantalla contando con lo que ocupa la pantalla.
+        availHeight
+
