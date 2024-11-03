@@ -6,14 +6,16 @@
     <title>Ejercicio 21</title>
     <script src="test.js"></script>
     <style>
-        .divnuevo{
-            background-color: black;
+        .divNuevo{
+            background-color: blueviolet;
             color: white;
-            font-size: 20px;
-            border-radius: 30%;
+            font-size: 40px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px 5px black;
             position: absolute;
-            right: 100%;
-            top: 100%;
+            right: 10px;
+            top: 10px;
+            z-index: 1;
         }
     </style>
 </head>
@@ -31,9 +33,15 @@
     </div>
     <br>
     <div class="texto">
-        <p class="enlace"><a href="http//www.google.com" onmouseover="crearDiv()" onmouseout="romperDiv()">Google</a></p>
-        <p class="enlace"><a href="http//www.google.com">Google</a></p>
-        <p class="enlace"><a href="http//www.google.com">Google</a></p>
+        <p class="enlace">
+            <a href="http//www.google.com" onmouseover="crearDiv(this)" onmouseout="romperDiv()">Google</a>
+        </p>
+        <p class="enlace">
+            <a href="http//www.youtube.com" onmouseover="crearDiv(this)" onmouseout="romperDiv()">Youtube</a>
+        </p>
+        <p class="enlace">
+            <a href="http//www.github.com" onmouseover="crearDiv(this)" onmouseout="romperDiv()">GitHub</a>
+        </p>
     </div>
 </body>
 </html>
