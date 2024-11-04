@@ -28,6 +28,12 @@ window.onload = function(){
         figura.setAttribute("class","figuras");
         moverFigura();
 
+        // Mejora de la música
+        let notaMusical = document.createElement("audio");
+        papi.appendChild(notaMusical);
+        let notaRandom = Math.floor(Math.random() * 10) + 1;
+        notaMusical.src = "./music/"+notaRandom+".mp3";
+        notaMusical.setAttribute("autoplay","autoplay");
     }
     
     window.onmousemove = function(){
@@ -35,6 +41,8 @@ window.onload = function(){
     }
     fondo.onmouseup = function(){
         fondo.removeChild(document.getElementsByClassName("figuras")[0]);
+        // Mejora de la música
+        document.getElementsByTagName("main")[0].removeChild(document.getElementsByTagName("audio")[0]);
     }
 }
 
