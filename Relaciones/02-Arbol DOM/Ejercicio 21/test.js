@@ -13,11 +13,11 @@ window.onload = function(){
 }
 
 function crearDiv(enlace){
-    // APARTADO B
+    // ********************************************************
     // Obtenemos los enlaces para la mejora del apartado B.
     let url = enlace.getAttribute("href");
     let spam = "La URL de este enlace es: ";
-    // APARTADO B
+    // ********************************************************
 
     // Creamos el nodo
     let nuevo = document.createElement("div");
@@ -35,8 +35,6 @@ function crearDiv(enlace){
 function romperDiv(){
     // Eliminamos el div cuando el ratón se retire del enlace
     let elemento = document.getElementsByClassName("divNuevo")[0];
-    if (elemento) {
-        var padre = elemento.parentNode;
-        padre.removeChild(elemento);
-    }
+    var padre = elemento.parentNode;
+    padre.removeChild(elemento);
 }
