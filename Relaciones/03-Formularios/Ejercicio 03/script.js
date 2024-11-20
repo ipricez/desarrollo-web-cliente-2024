@@ -46,9 +46,8 @@ window.onload = function(){
     for (let i = 0; i < listaPeliculas.length; i++) {
         listaPeliculas[i].onclick = function(){
             if(listaPeliculas[i].checked){
-                textArea.value += listaPeliculas[i].value;
-            } else textArea.value = "";
+                textArea.value += listaPeliculas[i].value+"\n";
+            } else textArea.value = textArea.value.replace(listaPeliculas[i].value+"\n","");
         }
     }
-
-    }
+}
