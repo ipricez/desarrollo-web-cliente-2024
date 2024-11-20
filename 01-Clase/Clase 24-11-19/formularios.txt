@@ -1,0 +1,68 @@
+-- Formularios --
+
+<form method="" action="" ...></form>
+1) d.getbyTagName / querySelector
+2) document.form
+3) document.forms[0]
+
+let formu = ... ;
+<input type="text/password" maxlenght=3 id="" name="" disabled value="">    // Solo dejan una línea
+
+Cómo llegar
+1) d.get  / d.querySelector
+2) formu.name (valor de name) (no se suele usar apenas)
+3) formu.elements[0]
+
+let ele = ... ;
+ele.maxlenght
+ele.id
+ele.value
+
+ele.select()
+ele.blur()
+ele.focus()
+
+- BOTONES -
+<input type="submit/reset/button" name="" id="" clas="" value="">
+ele.click();
+ele.blur();
+elel.focus();
+
+<input type="checkbox" name="" id="" class="" disabled value="1" checked>
+(ele.checked)
+(ele.defaultChecked)
+
+<input type="radio"...>
+Deben tener el mismo name
+form.aficion1
+    .nombre
+    .sexito[0]
+            [1]
+            [...]
+
+O   si  value="yes"
+O   no  value="no"
+O   a veces value="sometimes"
+
+ele.checked
+ele.defaultChecked
+ele.length
+
+<select name="felicidad" size=3(multiple) id="">
+    <option>ansiedad</option>
+    <option>tristeza</option>
+    <option selected>taciturno</option>
+</select>
+
+felicidadd.options[1]
+felicidad.selectIndex
+felicidad.onChange=function(){}
+
+Opciones
+ele.value
+ele.defaultSelected
+ele.selected
+
+<textarea name="coment"></textarea>
+formu.submit();
+formu.reset();
