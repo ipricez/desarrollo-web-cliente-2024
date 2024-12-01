@@ -13,14 +13,17 @@ window.onload = function(){
 
     // Guardo el formulario
     let formu = document.forms[0];
-    let listaPeliculas = [];
+    // let listaPeliculas = [];
     
-    for (let i = 0; i < formu.length; i++) {
-        if (formu[i].type == "checkbox") {
-            console.log("Checkbox encontrado");
-            listaPeliculas.push(formu[i]);
-        }
-    }
+    // for (let i = 0; i < formu.length; i++) {
+    //     if (formu[i].type == "checkbox") {
+    //         console.log("Checkbox encontrado");
+    //         listaPeliculas.push(formu[i]);
+    //     }
+    // }
+
+    // El for de arriba se puede sustituir por una línea
+    let listaPeliculas = document.querySelectorAll("input[type='checkbox']");
     
     // Guardo el textarea
     let textArea = document.getElementsByName("lista")[0];
