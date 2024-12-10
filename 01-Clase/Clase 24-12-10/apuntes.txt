@@ -1,0 +1,58 @@
+Eventos III: The Final
+-------------------------------
+
+Fase de Burbuja y Fase de Captura
+
+1
+    <p onclick='...'></p>
+2
+    dedo.onclick = function(){}
+3. 
+    métodos manejadores / handlers
+
+
+dedo.addEventListener(1,2,3)
+    1- Evento -> on *NO*
+    2- Función manejadora
+    3- Boolean. Por defecto false(burbuja)
+
+<section>
+    <div>
+        <p></p>
+    </div>
+</section>
+
+
+------------------------------------
+dedo.addEventListener(,,)
+
+let dedo = d.getByTagName("p")[0]M
+dedo.onclick = function(){
+    alert("a");
+}
+dedo.onclick = function(){
+    alert("b");
+}
+dedo.onclick=function(){
+    alert("c)
+}
+
+** Investigar BIND **
+
+----------------------------------------
+dedo.addEventListener("click",
+    pacoporro,true
+)
+dedo.removeEventListener(
+    "click",
+    pacoporro,true
+)
+
+------------------------------------------------
+objeto Event
+
+dedo.onclick = function(ev){
+    ev.preventDefault();
+    //
+    ev.stopPropagation();
+}  
