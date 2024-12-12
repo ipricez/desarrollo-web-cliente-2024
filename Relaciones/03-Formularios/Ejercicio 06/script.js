@@ -1,5 +1,5 @@
 /**
- * Crea un formulario con varios elementos textbox y una lista desplegable vacía.
+ * Crea un formulario con varios elementos checkbox y una lista desplegable vacía.
  * Implementa el código necesario para que, cada vez que se marque un checkbox, se cree una entrada nueva
  * en la lista desplegable con el país correspondiente. Si se desmarca un checkbox, debe eliminarse
  * el país correspondiente de la lista.

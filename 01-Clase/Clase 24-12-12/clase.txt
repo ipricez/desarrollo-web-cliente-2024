@@ -1,0 +1,29 @@
+FORMULARIOS
+
+<form name="form"></form>
+
+a) document.forms[]
+.name .id .action .method .submit() .reset
+
+let migue = document.forms[0];
+migue.elements[0];
+-   migue.name
+-   migue['name']
+
+-----------
+radiobuttons name="sexo"...
+
+let opciones = migue.sexo
+
+INCISO
+let noseque = opciones.some(function(e){
+    return e.checked;
+})
+INCISO
+
+let enviar= d.qs("input[type='submit']");
+enviar.onclick = function(){
+    ** ev.preventDefault();
+    //validar
+    
+}
