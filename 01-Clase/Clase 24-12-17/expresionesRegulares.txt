@@ -1,0 +1,7 @@
+** Expresiones Regulares **
+/definicion/
+
+expresion/flags     se activan o se desactivan
+metacaracteres
+    -> de sustitución   qué esperamos en una posición determinada del patrón
+    -> de cantidad      indicar cuantas veces debe aparecer un metacaracter
