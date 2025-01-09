@@ -1,0 +1,25 @@
+** Resumen **
+- Formularios (nuevos elementos) 
+- addEventListener (,,)
+- removeEventListener(,,)
+- Expresiones Regulares
+
+** Cómo usar Expresiones Regulares con JS **
+1. Definición en JS
+    (no es el mejor ejemplo, es antiguo)
+    let er = new RegExp("alumn[oae]st",ig)
+    (puede ser mejor)
+    let er = /alumn[oae]st/ig;          er.source er.flay
+
+    Ej:
+        caso1   let texto = "-------";
+        caos2   let texto = -----value;
+
+        /\b..../b\
+        /^.....$/
+
+2. Buscar coincidencias
+    er.test(texto)  --> devuelve boolean
+    texto.match(er) --> array?
+
+    
