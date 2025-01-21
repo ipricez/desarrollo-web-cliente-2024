@@ -1,0 +1,37 @@
+JSON
+    texto
+    .json
+
+Cómo se definen ARRAYS
+    let lista = new Array (5);
+    lista[0] = 23;
+
+    let lista = [];
+    lista [0] = 23;
+    lista [100];
+
+JSON.stringify(alumne)
+a texto plano(string)
+
+JSON.parse(cadena de texto)
+estructura json
+
+Objetos Literales
+const movil = {
+    marca:"Huawei",
+    modelo:"P40 Lote",
+    RAM:6,
+    disco:128,
+    SO:"Android 12"
+    prestaciones:["","",""],
+    hardware:{
+        placa:"",
+        micro:"",
+        carga:""
+    }
+}
+
+("RAM" in movil) true of false
+
+.keys .values
+.entries
