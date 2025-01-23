@@ -35,3 +35,39 @@ const movil = {
 
 .keys .values
 .entries
+
+23/01/2025
+Copiar
+let xandro = {
+    nombre : "gorgue",
+    edad : 19,
+    medidas : [ 80,18,30 ]
+}
+let aaron = xandro; NO
+
+let copia = JSON.parse(JSON.stringify(xandro));
+----
+let cadena = JSON.parse(cadena);
+...
+
+
+para saber si es array u object
+typeof()
+array.isarray(xandro.medidas)
+
+
+
+WEB STORAGE
+sessionStorage -->
+localStorage -->
+
+localStorage.nota = 7;
+localStorage['nota'] = 7;
+localStorage.setItem('nota',7);
+
+let valor =
+    localStorage.nota
+    localStorage['nota']
+    localStorage.getItem('nota')
+
+localStorage.length
