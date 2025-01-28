@@ -29,7 +29,7 @@
  */
 
 // Controlar FOCUS
-let focus = false;
+let focus;
 
 window.onload = function(){
     alert("Script cargado");

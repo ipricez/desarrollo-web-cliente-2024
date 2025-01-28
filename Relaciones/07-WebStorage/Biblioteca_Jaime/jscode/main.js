@@ -1,5 +1,21 @@
 // Iniciamos ejercicio de Bliblioteca
 window.onload = function(){
+
+    // ****************************
+    // nuevoLibro.js
+    // Lo hago arriba para que se actualice el h1
+    if(localStorage.getItem("nuevoLibro") != null){
+        let librito = JSON.parse(localStorage.getItem("nuevoLibro"));
+        if(library.push(librito)){
+            console.log("Libro añadido correctamente.");
+        }else{
+            console.log("Error al añadir el libro.");
+        }
+        console.log(librito);
+        localStorage.removeItem("nuevoLibro");
+    }
+    // ****************************
+
     // Vamos a completar el h1, que debe mostrar el número total de libros.
     const totalLibros = library.length;
     let texto = document.createTextNode("Hay "+totalLibros+" libros en la biblioteca.");
@@ -11,6 +27,8 @@ window.onload = function(){
     webTitulo.appendChild(textoDiv);
     
     // Pasamos a la biblioteca. Vamos a mostrar todos los libros.
+
+    
     // Guardamos el section dónde se van a guardar los libros.
     let webSection = document.getElementsByTagName("section")[0];
     // FOR-OF para recorrer el array "library"
@@ -42,5 +60,6 @@ window.onload = function(){
     
     // Añadir nuevo libro
     let nuevoLibro = document.getElementsByTagName("a")[0];
-    nuevoLibro.href = "nuevoLibro.html";    
+    nuevoLibro.href = "nuevoLibro.html";
+    
 }

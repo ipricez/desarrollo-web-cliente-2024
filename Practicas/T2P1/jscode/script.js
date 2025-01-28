@@ -206,11 +206,12 @@ window.onload = function(){
             // Creo el div warning
             var warning = document.createElement("div");
             warning.classList = ("warning");
+            warning.id = ("errores");
             document.querySelector("body").appendChild(warning);
             // Añado CSS pero NO FUNCIONA
-            warning.style.display = 'flex';
+            warning.style.display = 'grid';
             warning.setAttribute("margin","auto");
-            warning.setAttribute("flexdirection","column");
+            warning.setAttribute("grid-template-colum","1fr");
         }
 
         /* 4. Control de errores
