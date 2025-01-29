@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+</head>
+<body>
+    <h3>Datos guardados en Local Storage</h3>
+    <div id="saveLocalStorage"></div>
+    <button id="deleteLocalStorage">Borrar Datos</button>
+    <script>
+        let name = localStorage.getItem("name");
+        let pass = localStorage.getItem("pass");
+        
+        let div = document.getElementById("saveLocalStorage");
+
+        let texto = document.createTextNode(
+            localStorage.getItem("name")
+            +"\n"+
+            localStorage.getItem("pass"));
+        div.appendChild(texto);  
+
+        document.getElementById("deleteLocalStorage").addEventListener("click",function(event){
+            // event.preventDefault;
+            localStorage.removeItem("name");
+            localStorage.removeItem("pass");
+            console.log("Datos borrados");
+            console.log(localStorage.getItem("name"));
+            console.log(localStorage.getItem("pass"));
+            
+        })
+    </script>
+</body>
+</html>
