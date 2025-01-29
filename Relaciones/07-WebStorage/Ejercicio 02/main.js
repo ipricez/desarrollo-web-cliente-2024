@@ -5,3 +5,13 @@
  * Crea otro script que recupere la lista desde el almacenamiento local y lo muestre en la página web cada vez que se carga la página.
  * Añade en esa página el botón BORRAR que borre los datos almacenados en el local storage.
  */
+window.onload = function(){
+    
+}
+
+ function verLista(){
+    let i = 0;
+    while(localStorage.key(i) != null){
+        
+    } 
+}
