@@ -40,3 +40,13 @@ Formas o herramientas para controlar la asincronia
     pedido.catch(function(error){
         c.log(error);
     })
+
+API REST
+Conjunto de reglas que permiten a varios dispositivos comunicarse entre si a traves de HTTP.
+Usa los métodos POST, GET, PUT, DELETE.
+El intercambio de datos se hace en 3 formatos:
+    - Textoplano
+    - Json (principal)
+    - XML
+Se accede a cualquier recurso a través de URL
+Para qué necesito una API -> Conectar aplicaciones web y móviles
