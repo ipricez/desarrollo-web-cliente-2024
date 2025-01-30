@@ -1,0 +1,42 @@
+CONCURRENCIA
+T1 -> t2 -> t1 ->t3 -> t2   -> t1
+                            -> t2
+                            -> t3
+
+PARALELISMO
+t1->t2      -> t1
+t3->        -> t2
+            -> t3
+
+ASINCRONIA
+Capaciadd de retrasar una tarea.
+
+Formas o herramientas para controlar la asincronia
+    1.- funciones callback
+    2.- Promesas (termina en el 3.)
+    3.- async/await
+*JS es concurrente y asíncrono*
+
+    Promesas
+    Es un objeto, un tipo de elemento. Representa un valor que pueda destar disponible ahora o en un futuro. Es posible que no se avise nunca
+    Estados de una promesa:
+        - Pending
+        - Fulfilled
+        - Rejected
+    
+    let pedido = new Promise(function(EXITO RESOLVE,ERROR REJECT){
+        let accidente = (int)(Math.random()*3+1);
+        if(!accidente){
+            resolve("Pedido entregado");
+        } else{
+            reject("El mensajero ha muerto");
+        }
+    })
+
+    Cómo se trata
+    pedido.then(function(respuesta){
+        c.log(respuesta);
+    })
+    pedido.catch(function(error){
+        c.log(error);
+    })

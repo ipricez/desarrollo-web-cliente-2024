@@ -12,7 +12,7 @@ window.onload = function(){
             console.log("Error al añadir el libro.");
         }
         console.log(librito);
-        //localStorage.removeItem("nuevoLibro");
+        localStorage.removeItem("nuevoLibro");
     }
     // ****************************
 

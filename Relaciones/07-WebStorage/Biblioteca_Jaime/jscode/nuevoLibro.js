@@ -36,11 +36,10 @@ window.onload = function(){
         
         // Necesito tocar el formulario desde JS
         let formulario = document.getElementById("formu");
-        formulario.setAttribute("method","POST");
+        formulario.setAttribute("method","get");
         formulario.setAttribute("action","inicio.html");
-        window.location.href = "inicio.html";
-        // No se por qué no funciona el submit
-        // formulario.submit();
+        formulario.submit();
+        // window.location.href = "inicio.html";
 
     });
     cancelarBoton.addEventListener("click",function(){
