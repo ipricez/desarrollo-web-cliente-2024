@@ -26,7 +26,7 @@ window.onload = function(){
             const article = document.createElement("article");
 
             // Nombre del personaje
-            const nombre = document.createElement("h2");
+            const nombre = document.createElement("h3");
             nombre.textContent = personaje.name;
             article.appendChild(nombre);
 
@@ -37,12 +37,12 @@ window.onload = function(){
 
             // Raza del personaje
             const raza = document.createElement("p");
-            raza.textContent = `Raza: ${personaje.race}`;
+            raza.innerHTML = `Raza: ${personaje.race}`;
             article.appendChild(raza);
 
             // Máximo Ki del personaje
             const maxKi = document.createElement("p");
-            maxKi.textContent = `Máximo Ki: ${personaje.maxKi}`;
+            maxKi.innerHTML = `Máximo Ki: ${personaje.maxKi}`;
             article.appendChild(maxKi);
 
             // Agregar el artículo al section
