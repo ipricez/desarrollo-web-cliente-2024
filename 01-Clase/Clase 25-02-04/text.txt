@@ -1,0 +1,4 @@
+FETCH
+    - xmlHttpRequest
+    - Fetch (se usa esta)
+    - Async / Await
