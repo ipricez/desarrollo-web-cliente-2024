@@ -5,13 +5,15 @@ window.onload = function(){
     
     // Creamos el título.
     let titulo = document.createElement("h2");
-    titulo.innerHTML = paco.title;
+    // .innerHTML SUSPENDE JAIME
+    titulo.textContent = paco.title;
     let webSection = document.getElementsByTagName("section")[0];
     webSection.appendChild(titulo);
 
     // Empezamos con la tabla.
     let tabla = document.createElement("table");
     // FORMA DE HACERLO CON BUCLE
+
     for (const dato in paco) {
         if(dato!="title" && dato!="cover"){
             let tr = document.createElement("tr");
