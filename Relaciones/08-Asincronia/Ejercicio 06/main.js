@@ -14,8 +14,10 @@ window.onload = function(){
             return respuesta.json();
         })
         .then(function (datos) {
-            console.log(datos); // Verifica los datos en la consola
-            mostrarPersonajes(datos.items); // Muestra los personajes
+            // Verifica los datos en la consola
+            console.log(datos);
+            // Muestra los personajes
+            mostrarPersonajes(datos.items); 
         })
         .catch(function (error) {
             alert("Hubo un problema al cargar los personajes: " + error);

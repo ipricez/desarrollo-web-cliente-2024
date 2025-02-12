@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Por si acaso necesito instalarlo mañana: cors -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a la BBDD</title>
+</head>
+<body>
+    <form method="post">
+        Nombre: <input type="text" name="nombre" /> <br>
+        Ruta Imagen: <input type="text" name="imagen"> <br>
+        Descripcion: <input type="text" name="desc"> <br>
+    </form>
+    <button id="enviar">Enviar Datos</button>
+    <button id="obtener">Obtener Datos</button>
+    <section id="salida"></section>
+    <script>
+        let salida = document.getElementById('salida');
+
+        // Enviar Datos
+        let urlEnviar = "http://www.jaimeweb.es/medac/ejemplos/addJuego.php";
+        document.querySelector("#enviar").addEventListener("click", function(){
+            let formu = document.forms[0];
+            let fd = new FormData(formu);
+            //fd.append("dato", "nuevo dato");  Para añadir un dato nuevo al form
+            //fd.delete("dato");    Para borrar un dato
+            for (let [key, value] of fd.entries()) {
+                console.log(`Key: ${key}, Value: ${value}`);
+            }
+            // Declaro la cabecera
+            const cabecera = {
+                method: "POST",
+                body: fd
+            };
+            // Al ser un POST, en el fetch debo añadir otro parámetro
+            fetch(urlEnviar,cabecera)
+                .then(function(respuesta){
+                    if (!respuesta.ok){
+                        throw new Error("Error del fetch: " + error);
+                    };
+                    return respuesta.json();
+                })
+                .then(function(datos){
+                    let caja = document.createElement("article");
+                    caja.textContent = "Juego añadido";
+                    salida.appendChild(caja);
+                })
+                .catch(function(error){
+                    alert("Problemas accediendo a la URL: " + error);
+                })
+        });
+        
+
+        // Obtener datos.
+        let urlConsulta = "http://www.jaimeweb.es/medac/ejemplos/consulta.php";
+        document.querySelector("#obtener").addEventListener("click", function() {
+            fetch(urlConsulta)
+                .then(function(respuesta){
+                    if (!respuesta.ok){
+                        throw new Error("Error del fetch: " + error);
+                    };
+                    return respuesta.json();
+                })
+                .then(function(datos){
+                    // Corroboro que los datos son correctos
+                    console.log(datos);
+                    // Accedemos a los elementos
+                    for (const element of datos) {
+                        // Creamos los elementos
+                        let caja = document.createElement("article");
+                        let titulo = document.createElement("h2");
+                        let img = document.createElement("img");
+                        let descripcion = document.createElement("p");
+
+                        // Añadimos la información
+                        titulo.textContent = element.nombre;
+                        img.src = element.imagen;
+                        img.setAttribute("width","150px");
+                        descripcion.textContent = element.descripcion;
+
+                        // Acoplamos al html
+                        caja.appendChild(titulo);
+                        caja.appendChild(img);
+                        caja.appendChild(descripcion);
+                        salida.appendChild(caja);
+                    }
+                })
+        });
+    </script>
+</body>
+
+</html>
