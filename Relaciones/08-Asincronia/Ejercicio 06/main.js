@@ -46,7 +46,12 @@ window.onload = function(){
             const maxKi = document.createElement("p");
             maxKi.innerHTML = `Máximo Ki: ${personaje.maxKi}`;
             article.appendChild(maxKi);
-
+            
+            article.addEventListener("click",function(){
+                // Mandamos la información a personaje.
+                localStorage.setItem("personajeID",personaje.id);
+                window.location.href = "personaje.html";
+            })
             // Agregar el artículo al section
             section.appendChild(article);
         });

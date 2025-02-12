@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaje</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Personaje</h1>
+    <section class="personaje"></section>
+    <section class="planeta"></section>
+    <section class="transformaciones"></section>
+    <script>
+        // localStorage.deleteItem('personaje');
+        const personaje = JSON.parse(localStorage.getItem('personajeID'));
+        
+
+        // Usamos la plantilla
+        const url = "https://dragonball-api.com/api/characters/" + personaje;
+        fetch(url)
+        .then(function (respuesta) {
+            if (!respuesta.ok) {
+                throw new Error("Error al cargar los personajes: " + respuesta.status);
+            }
+            return respuesta.json();
+        })
+        .then(function (datos) {
+            // Verifica los datos en la consola
+            console.log(datos);
+
+            // Muestra las caracteristicas del personaje
+            const secPersonajes = document.querySelector(".personaje");
+            const titulo = document.createElement("h2");
+            titulo.textContent = datos.name;
+            console.log(datos.name);
+            
+            const parrafo = document.createElement("p");
+            const imagen = document.createElement("img");
+            imagen.src = datos.image;
+            imagen.style.width = "20px";
+            parrafo.textContent = datos.description;
+            
+            parrafo.appendChild(imagen);
+            secPersonajes.appendChild(titulo);
+            secPersonajes.appendChild(parrafo);
+
+            // Muestra el planeta del personaje
+            const secPlaneta = document.querySelector(".planeta");
+            const tituloPlaneta = document.createElement("h2");
+            tituloPlaneta.textContent = "Planeta " + datos.originPlanet.name;
+            const descPlaneta = document.createElement("p");
+            descPlaneta.textContent = datos.originPlanet.description;
+            const imgPlaneta = document.createElement("img");
+            imgPlaneta.src = datos.originPlanet.image;
+            imgPlaneta.style.width = "20px";
+            secPlaneta.appendChild(tituloPlaneta);
+            secPlaneta.appendChild(descPlaneta);
+            secPlaneta.appendChild(imgPlaneta);
+
+            // Muestra las transformaciones del personaje
+            const secTransformaciones = document.querySelector(".transformaciones");
+            const tituloTransformaciones = document.createElement("h2");
+            tituloTransformaciones.textContent = "Transformaciones";
+            secTransformaciones.appendChild(tituloTransformaciones);
+            // Tengo que recorrer el array de transformaciones
+            if (datos.transformations.length > 0){
+                for (const key in datos.transformations) {
+
+                    const parrafoTransformaciones = document.createElement("p");
+                    const imagenTransformaciones = document.createElement("img");
+
+                    parrafoTransformaciones.textContent = datos.transformations[key].name;
+                    imagenTransformaciones.src = datos.transformations[key].image;
+                    imagenTransformaciones.style.width = "20px";
+
+                    parrafoTransformaciones.appendChild(imagenTransformaciones);
+                    secTransformaciones.appendChild(parrafoTransformaciones);
+
+                    // Añado tambien el KI
+                    const parrafoKi = document.createElement("p");
+                    parrafoKi.textContent = "Máximo KI: " + datos.transformations[key].ki;
+                }
+            } else {
+                
+                const parrafoTransformaciones = document.createElement("p");
+                parrafoTransformaciones.textContent = "No tiene transformaciones";
+                secTransformaciones.appendChild(parrafoTransformaciones);
+            }
+        })
+        .catch(function (error) {
+            alert("Hubo un problema al cargar los personajes: " + error);
+        });
+        
+        
+    </script>
+</body>
+</html>

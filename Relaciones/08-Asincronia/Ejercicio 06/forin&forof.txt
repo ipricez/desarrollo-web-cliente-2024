@@ -1,0 +1,53 @@
+** for...in **
+Se usa para recorrer las propiedades enumerables de un objeto (incluyendo índices de un array, aunque no es la mejor opción para arrays).
+
+📌 Características:
+    Recorre las claves de un objeto, no los valores directamente.
+    También puede iterar sobre las claves de un array (aunque for...of es mejor para eso).
+    Puede incluir propiedades heredadas si no se usa hasOwnProperty.
+✅ Cuándo usarlo:
+    ✔ Cuando necesitas recorrer las propiedades de un objeto.
+
+❌ Cuándo evitarlo:
+    🚫 Para iterar sobre arrays, porque devuelve los índices como strings, no los valores directamente.
+
+EJEMPLO:
+const personaje = {
+    nombre: "Goku",
+    raza: "Saiyajin",
+    poder: "Ultra Instinto"
+};
+
+for (let clave in personaje) {
+    console.log(`${clave}: ${personaje[clave]}`);
+}
+-------------------------
+nombre: Goku
+raza: Saiyajin
+poder: Ultra Instinto
+-------------------------
+
+** for...of **
+Se usa para recorrer los valores de un iterable, como arrays, strings, Maps, Sets, y otros.
+
+📌 Características:
+    Recorre valores directamente en lugar de índices o claves.
+    Funciona con cualquier estructura que sea iterable (Array, String, Map, Set, etc.).
+    No es para objetos normales (salvo que uses Object.values()).
+✅ Cuándo usarlo:
+    ✔ Para recorrer elementos de un array, string, Map o Set.
+
+❌ Cuándo evitarlo:
+    🚫 Para objetos normales, porque no son iterables de forma nativa.
+
+const personajes = ["Goku", "Vegeta", "Gohan"];
+
+for (let personaje of personajes) {
+    console.log(personaje);
+}
+
+---------------------------
+Goku
+Vegeta
+Gohan
+----------------------------
